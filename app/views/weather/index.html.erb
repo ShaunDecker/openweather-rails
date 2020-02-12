@@ -1,0 +1,10 @@
+<div id="search_form">
+  <h1>Local Weather Details</h1>
+  <%= form_with(url: "/", method: "get") do %>
+    <%= text_field_tag :q, nil, placeholder: "Enter a city" %>
+    <%= submit_tag("Retrieve") %>
+  <% end %>
+</div>
+<div id="weather_results">
+  <p><%= @weather %></p>
+</div>
